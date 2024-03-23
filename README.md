@@ -1,0 +1,3 @@
+解压OxygenNotIncludedMod到本地
+使用VisualStudio生成
+将OxygenNotIncludedMod/Mods中的大一统文件夹 移至缺氧dev文件夹
