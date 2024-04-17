@@ -95,6 +95,7 @@
     <Compile Include="物质大一统.cs" />
     <Compile Include="电线穿墙.cs" />
     <Compile Include="精准采集.cs" />
+    <Compile Include="自动挖掘墙.cs" />
     <Compile Include="自动收获.cs" />
     <Compile Include="获得所有好特质.cs" />
     <Compile Include="蒸汽科技.cs" />

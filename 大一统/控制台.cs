@@ -17,6 +17,7 @@ namespace 大一统{
         [Option("辐星高照", "控制主世界太空辐射浓度", "地图特质", Format = "F2")] [Limit(1.0, 30.0)] [JsonProperty] public float 辐星高照 { get; set; }
 
         [Option("方块墙", "建造一个自然土块", "新的建筑")] [JsonProperty] public bool 方块墙 { get; set; }
+        [Option("自动挖掘墙", "挖掘在其上的固体", "新的建筑")] [JsonProperty] public bool 自动挖掘墙 { get; set; }
         [Option("动物猎场", "自动处死进入的动物 可通过信号控制", "新的建筑")] [JsonProperty] public bool 动物猎场 { get; set; }
         [Option("中子湮灭发生器", "发射大量辐射粒子", "新的建筑")] [JsonProperty] public bool 中子湮灭发生器 { get; set; }
 
@@ -76,6 +77,7 @@ namespace 大一统{
             this.动物更耐高低温 = true;
             this.动物无限繁殖 = true;
             this.方块墙 = true;
+            this.自动挖掘墙 = true;
             this.动物猎场 = true;
             this.中子湮灭发生器 = true;
             this.辐射蜂巢耐热 = true;

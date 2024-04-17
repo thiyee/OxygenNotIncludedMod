@@ -19,8 +19,6 @@ namespace 动物猎场
 
 			this.partitionerEntry1 = GameScenePartitioner.Instance.Add("Trap1", gameObject, Grid.PosToCell(gameObject), GameScenePartitioner.Instance.trapsLayer, new Action<object>(this.OnCreatureOnTrap));
 			this.partitionerEntry2 = GameScenePartitioner.Instance.Add("Trap2", gameObject, Grid.CellRight(Grid.PosToCell(gameObject)), GameScenePartitioner.Instance.trapsLayer, new Action<object>(this.OnCreatureOnTrap));
-			//this.partitionerEntry3 = GameScenePartitioner.Instance.Add("Trap3", gameObject, Grid.CellAbove(Grid.PosToCell(gameObject)), GameScenePartitioner.Instance.trapsLayer, new Action<object>(this.OnCreatureOnTrap));
-			//this.partitionerEntry4 = GameScenePartitioner.Instance.Add("Trap4", gameObject, Grid.CellAbove(Grid.CellRight(Grid.PosToCell(gameObject))), GameScenePartitioner.Instance.trapsLayer, new Action<object>(this.OnCreatureOnTrap));
 			foreach (GameObject gameObject2 in this.storage.items)
 			{
 				this.SetStoredPosition(gameObject2);
