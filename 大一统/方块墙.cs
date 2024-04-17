@@ -34,7 +34,7 @@ namespace 方块墙
 			float melting_point = 1600f;
 			BuildLocationRule build_location_rule = BuildLocationRule.NotInTiles;
 			EffectorValues none = NOISE_POLLUTION.NONE;
-			BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, new float[]{1f}, MATERIALS.ALL_MINERALS, melting_point, build_location_rule, new EffectorValues
+			BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, new float[]{1000}, MATERIALS.ANY_BUILDABLE, melting_point, build_location_rule, new EffectorValues
 			{
 				amount = 10,
 				radius = 0

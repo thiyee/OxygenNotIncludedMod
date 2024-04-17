@@ -25,6 +25,23 @@ namespace 物质大一统
 				if (entry.elementId == "SuperCoolant") { entry.highTemp = 8500f; entry.specificHeatCapacity *= 30.0f; }
 				if (entry.elementId == "ViscoGel") { entry.lowTemp = 20.15f; }
 			}
+			
+			string log = "Load element:" + entry.elementId + "Tags:";
+			if (entry.tags != null)  foreach (string s in entry.tags) log += s + " ";
+			Console.WriteLine(log);
+
+			if (entry.tags == null)
+            {
+				entry.tags = new string[] { "BuildableAny" };
+
+			}
+            if (!entry.tags.Contains("BuildableAny"))
+            {
+				entry.tags.AddItem("BuildableAny");
+
+			}
+
+
 		}
 	}
 

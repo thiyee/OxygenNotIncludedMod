@@ -77,6 +77,9 @@
     <Compile Include="小人初始技能点.cs" />
     <Compile Include="小人工作速度.cs" />
     <Compile Include="强制建造.cs" />
+    <Compile Include="强制隔热.cs" />
+    <Compile Include="按摩床恢复速度.cs" />
+    <Compile Include="捕捉飞行动物和鱼.cs" />
     <Compile Include="控制台.cs" />
     <Compile Include="改造储气液库.cs" />
     <Compile Include="改造液氢引擎.cs" />

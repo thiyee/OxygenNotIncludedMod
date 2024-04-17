@@ -33,8 +33,9 @@ namespace 大一统{
         [Option("光电效应", "太阳能板发电量增强 没有上限 告别CPU发电", "新建筑特性", Format = "F0")] [Limit(1, 10)] [JsonProperty] public float 光电效应 { get; set; }
         [Option("储物箱容量", "储物箱容量(吨)", "新建筑特性", Format = "F0")] [Limit(20,2000)] [JsonProperty] public float 储物箱容量 { get; set; }
         [Option("蒸汽时代", "蒸汽机能吸取速度*5 过热温度=200℃ 发热降低90%", "新建筑特性")] [JsonProperty] public bool 蒸汽时代 { get; set; }
+        [Option("强制隔热", "隔热砖 液体/气体管道 不发生热交换", "新建筑特性")] [JsonProperty] public bool 强制隔热 { get; set; }
         
-        //[Option("捕捉飞行动物和鱼", "", "功能性修改")] [JsonProperty] public bool 捕捉飞行动物和鱼 { get; set; }
+        [Option("捕捉飞行动物和鱼", "", "功能性修改")] [JsonProperty] public bool 捕捉飞行动物和鱼 { get; set; }
         [Option("动物更耐高低温", "比原来更耐热/耐寒", "功能性修改")] [JsonProperty] public bool 动物更耐高低温 { get; set; }
         [Option("辐射蜂巢耐热", "辐射蜂巢能在常温下生存", "功能性修改")] [JsonProperty] public bool 辐射蜂巢耐热 { get; set; }
         [Option("动物无限繁殖", "动物不会拥挤和封闭", "功能性修改")] [JsonProperty] public bool 动物无限繁殖 { get; set; }
@@ -70,7 +71,7 @@ namespace 大一统{
         public 大一统控制台UI()
         {
             this.按摩床恢复速度 = true;
-            //this.捕捉飞行动物和鱼 = true;
+            this.捕捉飞行动物和鱼 = true;
             this.超视望远镜 = true;
             this.动物更耐高低温 = true;
             this.动物无限繁殖 = true;
@@ -110,6 +111,7 @@ namespace 大一统{
             this.光电效应 = 10;
             this.储物箱容量 = 20;
             this.蒸汽时代 = true;
+            this.强制隔热 = true;
             this.辐星高照 = 10f;
             this.物质导热系数 = 1f;
             this.最低结块质量 = 500f;
@@ -129,6 +131,7 @@ namespace 大一统{
             base.OnLoad(harmony);
 
             Strings.Add(new string[] { "STRINGS.UI.UISIDESCREENS.LIQUIDHEATERSIDESCREEN.SLIDERTITLE", "目标温度                                 发热效率" });
+            强制建造.强制建造 强制建造ins = new 强制建造.强制建造();
         }
     }
 }
