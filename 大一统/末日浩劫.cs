@@ -57,4 +57,19 @@ namespace 末日浩劫
 			}
 		}
 	}
+
+	public class 末日浩劫{
+		[HarmonyPatch(typeof(MeteorShowerSeason), "MeteorShowerSeason")]
+		public static void Postfix(ref GameplaySeasons __instance, string id, GameplaySeason.Type type, string dlcId, float period, bool synchronizedToPeriod, float randomizedEventStartTime = -1f, bool startActive = false, int finishAfterNumEvents = -1, float minCycle = 0f, float maxCycle = float.PositiveInfinity, int numEventsToStartEachPeriod = 1, bool affectedByDifficultySettings = true, float clusterTravelDuration = -1f)
+		{
+			if (PeterHan.PLib.Options.SingletonOptions<大一统.大一统控制台UI>.Instance.末日浩劫){
+
+
+
+			}
+		}
+
+
+	}
+
 }
